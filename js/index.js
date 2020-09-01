@@ -40,3 +40,116 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// navigation elements
+const allAnchors = document.querySelectorAll('a');
+allAnchors[0].textContent = siteContent["nav"]["nav-item-1"];
+allAnchors[1].textContent = siteContent["nav"]["nav-item-2"];
+allAnchors[2].textContent = siteContent["nav"]["nav-item-3"];
+allAnchors[3].textContent = siteContent["nav"]["nav-item-4"];
+allAnchors[4].textContent = siteContent["nav"]["nav-item-5"];
+allAnchors[5].textContent = siteContent["nav"]["nav-item-6"];
+allAnchors.forEach(a => a.style.color = "green");
+
+
+// adding two new items in the navigation bar
+
+const newNav1 = document.createElement("a");
+const allNavBars = document.querySelector('nav');
+newNav1.textContent = "Blog";
+newNav1.href = "#";
+newNav1.style.color = "green";
+allNavBars.prepend(newNav1);
+
+const newNav2 = document.createElement("a");
+newNav2.textContent = "Profile";
+newNav2.href = "#";
+newNav2.style.color = "green";
+allNavBars.appendChild(newNav2);
+// allNavBars.forEach(a => a.style.color = "green");
+
+
+
+
+// top right image
+const logoImage = document.querySelector("#cta-img");
+logoImage.src = siteContent["cta"][ "img-src"];
+
+// h1 element
+const aweText = document.querySelector("h1");
+aweText.innerHTML = "Dom <br> Is <br> Awesome";
+
+// button element
+const btn = document.querySelector("button");
+btn.textContent = siteContent["cta"]["button"];
+
+// main content elements
+const mainContent = document.querySelectorAll("h4");
+mainContent[0].textContent = siteContent["main-content"][ "features-h4"];
+mainContent[1].textContent = siteContent["main-content"][  "about-h4"];
+mainContent[2].textContent = siteContent["main-content"][ "services-h4"];
+mainContent[3].textContent = siteContent["main-content"][ "product-h4"];
+mainContent[4].textContent = siteContent["main-content"][ "vision-h4"];
+// mainContent[5].textContent = siteContent["main-content"][ "contact-h4"]; 
+
+
+// paragraph elements
+const paragraph = document.querySelectorAll("p");
+paragraph[0].textContent = siteContent["main-content"]["features-content"];
+paragraph[1].textContent = siteContent["main-content"]["about-content"];
+paragraph[2].textContent = siteContent["main-content"]["services-content"];
+paragraph[3].textContent = siteContent["main-content"]["product-content"];
+paragraph[4].textContent = siteContent["main-content"]["vision-content"];
+
+// middle image element
+const middleImg = document.querySelector("#middle-img");
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+
+//bottom section elements
+const bottomEle = document.querySelectorAll("h4");
+bottomEle[5].textContent = siteContent["contact"]["contact-h4"];
+
+const bottomEleTwo = document.querySelectorAll("p");
+bottomEleTwo[5].textContent = siteContent["contact"]["address"];
+
+const bottomEleThree = document.querySelectorAll("p")
+bottomEleThree[6].textContent = siteContent["contact"]["phone"];
+
+const bottomEleFour = document.querySelectorAll("p")
+bottomEleThree[7].textContent = siteContent["contact"]["email"];
+
+// footer element
+const footer = document.querySelector("footer");
+// console.log(footer);
+footer.textContent = siteContent["footer"][ "copyright"];
+
+// stretch task ----update styles 
+
+const h1Color = document.querySelector("h1");;
+h1Color.style.color = "#3CAEA3";
+
+const copyRight = document.querySelector("footer");
+copyRight.style.color = "green";
+copyRight.style.fontSize = "2em";
+
+const middleSec = document.querySelectorAll(".text-content h4");
+for(let i = 0; i < middleSec.length; i++){
+  middleSec[i].style.color = "blue";
+}
+
+const middlePara = document.querySelectorAll(".text-content p");
+for(let i = 0; i < middlePara.length; i++){
+  middlePara[i].style.color = "orange";
+}
+
+const btmSec = document.querySelectorAll(".contact p");
+for(let i = 0; i < btmSec.length; i++){
+  btmSec[i].style.color = "#20639B";
+}
+
+const backColor = document.querySelector('button');
+backColor.style.backgroundColor = "#ED553B";
+
+
